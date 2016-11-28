@@ -1,0 +1,20 @@
+<resources>
+	<!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=8F:79:02:FC:32:1A:90:09:CB:92:B0:76:FA:78:F3:C2:54:92:1D:7C%3Bcom.loxboc.applaudmap
+
+    You can also add your credentials to an existing key, using this line:
+    8F:79:02:FC:32:1A:90:09:CB:92:B0:76:FA:78:F3:C2:54:92:1D:7C;com.loxboc.applaudmap
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+	<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAmDhCR2efwv_qZQFfxv9bGonlfh_hdMkc</string>
+	<string name="facebook_access_token" templateMergeStrategy="preserve" translatable="false">334357133599887|2vUaylC1kOS6LoMYA8ja8pcq1_s</string>
+</resources>

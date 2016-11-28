@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+retrolambda {
+	jdk System.getenv("JAVA8_HOME")
+	oldJdk System.getenv("JAVA7_HOME")
+	javaVersion JavaVersion.VERSION_1_7
+	defaultMethods false
+}
+
+android {
+	compileSdkVersion 24
+	buildToolsVersion "24.0.3"
+	defaultConfig {
+		applicationId "com.loxboc.applaudmap"
+		minSdkVersion 19
+		targetSdkVersion 24
+		versionCode 1
+		versionName "1.0"
+		testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+	}
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+	androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+		exclude group: 'com.android.support', module: 'support-annotations'
+	})
+	compile 'com.android.support:appcompat-v7:24.2.1'
+	compile 'com.google.android.gms:play-services-maps:9.4.0'
+	compile 'com.google.android.gms:play-services-places:9.4.0'
+	compile 'com.google.maps.android:android-maps-utils:0.4+'
+	testCompile 'junit:junit:4.12'
+
+	compile 'com.jakewharton:butterknife:8.4.0'
+	apt 'com.jakewharton:butterknife-compiler:8.4.0'
+	compile 'com.squareup.picasso:picasso:2.5.2'
+
+	compile 'com.google.dagger:dagger:2.4'
+	apt 'com.google.dagger:dagger-compiler:2.4'
+	compile 'com.squareup.retrofit2:retrofit:2.1.0'
+	compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+	compile 'com.squareup.okhttp3:logging-interceptor:3.3.0'
+
+	compile 'io.reactivex:rxjava:1.1.5'
+	compile 'io.reactivex:rxandroid:1.2.0'
+	compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+	provided "org.projectlombok:lombok:1.12.6"
+}

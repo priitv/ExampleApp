@@ -1,0 +1,5 @@
+<resources>
+	<string name="app_name">ExampleApp</string>
+	<string name="title_activity_root">Map</string>
+	<string name="loading_places">LOADING NEARBY PLACES...</string>
+</resources>
